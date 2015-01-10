@@ -1,0 +1,10 @@
+
+qless:
+  build: .
+  command: sh run.sh
+  ports:
+  - "3000:5678"
+  links:
+  - redis
+redis:
+  image: "redis:2.8"
